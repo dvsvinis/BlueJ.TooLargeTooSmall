@@ -22,3 +22,21 @@
 
 ## Unit Test
 No Unit Test
+
+
+Mystery number is between 1-25, I will use 15
+
+DO
+Prompt user for a guess
+count++
+
+Compare guess to mystery
+
+If 
+> output too large 
+< output too small
+} while =
+= 
+ 
+
+

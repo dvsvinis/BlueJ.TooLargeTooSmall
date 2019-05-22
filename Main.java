@@ -5,29 +5,28 @@
  * @author (your name)
  * @version (a version number or a date)
  */
+import java.util.Scanner;
 public class Main
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Main
-     */
-    public Main()
-    {
-        // initialise instance variables
-        x = 0;
+    
+    public static void main(String[] args ){
+        int guess = 0;  //declare variable guess .
+        int count = 0;  //declare counter
+        int mysteryNumber = 15;   //this is the number trying to guess
+        
+        Scanner in = new Scanner(System.in);  // declare scanner
+        System.out.println("Guess a number between 1 and 25.");
+        do {
+            System.out.println("What is your guess in whole numbers? "); //prompt user for number
+            guess = in.nextInt();  //reads input and assigns to guess
+            count++;
+            if (guess > mysteryNumber) System.out.println("Too large");
+            if (guess < mysteryNumber) System.out.println("Too small");
+        } while (guess != mysteryNumber);
+            
+        System.out.println("Correct guess");
+        System.out.println("It took " + count + " tries to guess the number.");
+    
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
 }
